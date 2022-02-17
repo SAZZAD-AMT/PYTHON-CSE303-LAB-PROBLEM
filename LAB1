@@ -1,0 +1,31 @@
+1.Given two integer numbers, write a Python program to return their product. If the product is greater 
+than 1000, then return their sum. Read inputs from the user
+
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+
+product=a*b
+
+if(product>1000):
+    sum=a+b
+    print("Sum is = %d" %sum)
+else: 
+    print("Product is = %d" %product)
+    
+    
+2.Write a Python program to find the area and perimeter of a circle. Read inputs from the user. 
+
+import math
+
+def circle_rad(radius):
+    return math.pi*radius*radius
+
+def circle_peri(radius):
+    return 2* math.pi*radius
+
+radius = float (input("Enter radius: "))
+area= circle_rad(radius)
+print("Area = ", area)
+
+perimeter= circle_peri(radius)
+print("Perimeter = ", perimeter)
