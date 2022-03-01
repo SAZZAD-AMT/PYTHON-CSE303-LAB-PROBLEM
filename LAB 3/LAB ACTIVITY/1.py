@@ -5,4 +5,4 @@ print(type(obj))
 
 print(obj[obj%2==0])
 print(obj+5 )
-print(obj * 2)
+print(obj*2)
