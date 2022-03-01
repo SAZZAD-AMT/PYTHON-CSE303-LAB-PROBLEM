@@ -1,0 +1,106 @@
+{
+	"name": "vscode-opn",
+	"displayName": "Open File in App",
+	"description": "Integrates node.js module 'opn' to open files directly by default, or on your local web server using the default app set by the OS, or an app set by you. \n\n Great for rapid prototyping!",
+	"version": "1.1.2",
+	"publisher": "lfurzewaddock",
+	"icon": "public/assets/images/vscode-opn.png",
+	"galleryBanner": {
+		"color": "#A88037",
+		"theme": "dark"
+	},
+	"keywords": [
+		"open",
+		"launch",
+		"file",
+		"program",
+		"app",
+		"application",
+		"default",
+		"html",
+		"htm",
+		"txt",
+		"json",
+		"xml",
+		"log"
+	],
+	"bugs": {
+		"url": "https://github.com/lfurzewaddock/vscode-opn/issues"
+	},
+	"homepage": "https://github.com/lfurzewaddock/vscode-opn/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lfurzewaddock/vscode-opn"
+	},
+	"engines": {
+		"vscode": "^0.10.6"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.opn",
+				"title": "Open"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.opn",
+				"key": "ctrl+alt+o",
+				"mac": "cmd+alt+o"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "vscode-opn configuration",
+			"properties": {
+				"vscode-opn.perLang": {
+					"type": "object",
+					"default": {},
+					"description": "vscode-opn 'opnOptions' array of objects to provide args to the opn command for each language"
+				},
+				"vscode-opn.webServerProtocol": {
+					"type": "string",
+					"default": "http",
+					"description": "Enter a protocol, e.g. 'http' or 'https'"
+				},
+				"vscode-opn.webServerHostname": {
+					"type": "string",
+					"default": "localhost",
+					"description": "Enter the hostname or IP of your local web server"
+				},
+				"vscode-opn.webServerPort": {
+					"type": "integer",
+					"default": 8080,
+					"description": "Enter the port of your local web server"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"opn": "^4.0.0"
+	},
+	"devDependencies": {
+		"decache": "^3.0.3",
+		"jscs": "^2.10.1",
+		"jshint": "^2.9.1",
+		"vscode": "^0.11.0"
+	},
+	"license": "See LICENSE.txt",
+	"__metadata": {
+		"id": "90f1ad09-b3d2-4225-8f2c-16fa8cf1973a",
+		"publisherId": "117d0a74-6b07-4b56-a8fe-93c2a36c7e50",
+		"publisherDisplayName": "lfurzewaddock",
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1640458883211
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "word-theme",
+	"displayName": "Word",
+	"description": "A dark theme based on Microsoft Word 5.5 for DOS",
+	"version": "1.3.6",
+	"publisher": "coastermcgee",
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"icon": "images/icon.png",
+	"categories": [
+		"Themes"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/coastermcgee/vscode-word-theme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/coastermcgee/vscode-word-theme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/coastermcgee/vscode-word-theme/issues"
+	},
+	"galleryBanner": {
+		"color": "#0000aa",
+		"theme": "dark"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Word",
+				"uiTheme": "vs-dark",
+				"path": "./themes/word-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "f93a66d8-1539-4079-8112-4175e7f5c0f0",
+		"publisherId": "e6d415f7-81e4-4cef-8951-0fda2e941fe7",
+		"publisherDisplayName": "Coaster McGee",
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1640458534401
+	}
+}

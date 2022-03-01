@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+		<Metadata>
+			<Identity Language="en-US" Id="cpptools-extension-pack" Version="1.1.0" Publisher="ms-vscode" />
+			<DisplayName>C/C++ Extension Pack</DisplayName>
+			<Description xml:space="preserve">Popular extensions for C++ development in Visual Studio Code.</Description>
+			<Tags>C,C++,IntelliSense,Microsoft,color-theme,build,cmake,remote,ssh,wsl,codespace,liveshare,c++,__web_extension</Tags>
+			<Categories>Extension Packs</Categories>
+			<GalleryFlags>Public</GalleryFlags>
+			
+			<Properties>
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.48.0" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="ms-vscode.cpptools,ms-vscode.cpptools-themes,twxs.cmake,ms-vscode.cmake-tools,cschlosser.doxdocgen,jeff-hykin.better-cpp-syntax,ms-vscode-remote.remote-wsl,ms-vscode-remote.remote-containers,ms-vscode-remote.remote-ssh" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace,web" />
+				<Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+				
+				
+				
+				
+				
+				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+				
+				
+			</Properties>
+			<License>extension/LICENSE.txt</License>
+			<Icon>extension/LanguageCCPP_color_128x.png</Icon>
+		</Metadata>
+		<Installation>
+			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+		</Installation>
+		<Dependencies/>
+		<Assets>
+			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/LanguageCCPP_color_128x.png" Addressable="true" />
+		</Assets>
+	</PackageManifest>

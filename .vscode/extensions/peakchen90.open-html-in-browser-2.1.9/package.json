@@ -1,0 +1,124 @@
+{
+	"name": "open-html-in-browser",
+	"displayName": "Open In Default Browser",
+	"description": "A VSCode extension to fast open html file in browser",
+	"version": "2.1.9",
+	"main": "./dist/extension.js",
+	"scripts": {
+		"dev": "rollup --config rollup.config.js --watch",
+		"build": "rollup --config rollup.config.js",
+		"test": "node ./dist/runTest.js",
+		"pub": "npm run build && vsce publish",
+		"pack": "npm run build && vsce package"
+	},
+	"publisher": "peakchen90",
+	"engines": {
+		"vscode": "^1.38.1"
+	},
+	"license": "MIT",
+	"icon": "public/icon.jpg",
+	"activationEvents": [
+		"onCommand:openInDefaultBrowser.openInDefaultBrowser"
+	],
+	"categories": [
+		"Other"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "openInDefaultBrowser.openInDefaultBrowser",
+				"title": "%openInDefaultBrowser.title%"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "resourceLangId == html || resourceLangId == xml || resourceExtname == .pdf",
+					"command": "openInDefaultBrowser.openInDefaultBrowser",
+					"group": "1_modification"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceLangId == html || resourceLangId == xml || resourceExtname == .pdf",
+					"command": "openInDefaultBrowser.openInDefaultBrowser",
+					"group": "1_modification"
+				}
+			],
+			"touchBar": [
+				{
+					"when": "resourceLangId == html || resourceLangId == xml || resourceExtname == .pdf",
+					"command": "openInDefaultBrowser.openInDefaultBrowser"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"when": "resourceLangId == html || resourceLangId == xml || resourceExtname == .pdf",
+				"command": "openInDefaultBrowser.openInDefaultBrowser",
+				"key": "ctrl+1",
+				"mac": "cmd+1"
+			}
+		],
+		"configuration": {
+			"title": "Open In Default Browser",
+			"properties": {
+				"openInDefaultBrowser.run.openWithLocalHttpServer": {
+					"type": "boolean",
+					"default": true,
+					"description": "%openInDefaultBrowser.openWithLocalHttpServer%"
+				}
+			}
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/peakchen90/vscode-open-in-default-browser.git"
+	},
+	"bugs": {
+		"url": "https://github.com/peakchen90/vscode-open-in-default-browser/issues"
+	},
+	"keywords": [
+		"open",
+		"html",
+		"default",
+		"browser",
+		"chrome",
+		"http",
+		"local server"
+	],
+	"devDependencies": {
+		"@types/express": "^4.17.11",
+		"@types/node": "^15.6.0",
+		"@types/vscode": "1.38.0",
+		"@typescript-eslint/eslint-plugin": "^4.24.0",
+		"@typescript-eslint/parser": "^4.24.0",
+		"builtin-modules": "^3.2.0",
+		"eslint": "^7.27.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-plugin-import": "^2.23.3",
+		"rollup": "^2.48.0",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-json": "^4.0.0",
+		"rollup-plugin-typescript": "^1.0.1",
+		"typescript": "^4.2.4",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"art-template": "^4.13.2",
+		"compression": "^1.7.4",
+		"express": "^4.17.1",
+		"express-art-template": "^1.0.1",
+		"getport": "^0.1.0",
+		"open": "^8.0.9",
+		"serve-favicon": "^2.5.0"
+	},
+	"__metadata": {
+		"id": "e552c70b-32af-4b0b-8f48-5e7e01e688b0",
+		"publisherId": "8d0479cc-c5b2-4c0f-88c2-d38452c8b3df",
+		"publisherDisplayName": "peakchen90",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1644899868922
+	}
+}
