@@ -117,6 +117,6 @@ df_list1.plot.scatter(x = "x", y = "y")
 df_list1.boxplot(column = ['x', 'y'])
 
 ```
-# ALL CODE WILL HAVE AS A FOLDER CHECK THE REPOSITORY.
+# ALL CODE WILL HAVE AS A FOLDER SO CHECK FOLDERS.
 
 
