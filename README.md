@@ -1,6 +1,7 @@
 # PYTHON-CSE303-LAB-PROBLEM
 
-# Python is commonly used for developing websites and software, task automation, data analysis, and data visualization. Since it's relatively easy to learn, Python has been adopted by many non-programmers such as accountants and scientists, for a variety of everyday tasks, like organizing finances.
+<h3> Python is commonly used for developing websites and software, task automation, data analysis, and data visualization. Since it's relatively easy to learn, Python has been adopted by many non-programmers such as accountants and scientists, for a variety of everyday tasks, like organizing finances.</h3>
+
 # LAB 1
 ```
 lis1=[3,10,9,13,12,15]
