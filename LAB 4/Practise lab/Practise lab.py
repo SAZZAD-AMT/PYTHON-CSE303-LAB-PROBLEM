@@ -76,3 +76,130 @@ print("Skewness: " , V28_length.skew())
 correlation= dataframe.corr()
 positive_corr= correlation[correlation > 0]
 print(positive_corr)
+
+# 10. Support your findings in Question 9 using a BoxPlot.
+
+positive_corr.boxplot()
+
+dataframe.boxplot(column = ['Time'])
+print("Kurtosis: " , dataframe[['Time']].kurt())
+print("Skewness: " ,  dataframe[['Time']].skew())
+
+dataframe.boxplot(column = ['V1'])
+print("Kurtosis: " , dataframe[['V1']].kurt())
+print("Skewness: " ,  dataframe[['V1']].skew())
+
+dataframe.boxplot(column = ['V4'])
+print("Kurtosis: " , dataframe[['V4']].kurt())
+print("Skewness: " ,  dataframe[['V4']].skew())
+
+dataframe.boxplot(column = ['Class'])
+print("Kurtosis: " , dataframe[['Class']].kurt())
+print("Skewness: " ,  dataframe[['Class']].skew())
+
+dataframe.boxplot(column = ['V5'])
+print("Kurtosis: " , dataframe[['V5']].kurt())
+print("Skewness: " ,  dataframe[['V5']].skew())
+
+dataframe.boxplot(column = ['V6'])
+print("Kurtosis: " , dataframe[['V6']].kurt())
+print("Skewness: " ,  dataframe[['V6']].skew())
+
+dataframe.boxplot(column = ['Amount'])
+print("Kurtosis: " , dataframe[['Amount']].kurt())
+print("Skewness: " ,  dataframe[['Amount']].skew())
+
+dataframe.boxplot(column = ['V7'])
+print("Kurtosis: " , dataframe[['V7']].kurt())
+print("Skewness: " ,  dataframe[['V7']].skew())
+
+
+dataframe.boxplot(column = ['V20'])
+print("Kurtosis: " , dataframe[['V20']].kurt())
+print("Skewness: " ,  dataframe[['V20']].skew())
+
+dataframe.boxplot(column = ['V21'])
+print("Kurtosis: " , dataframe[['V21']].kurt())
+print("Skewness: " ,  dataframe[['V21']].skew())
+
+dataframe.boxplot(column = ['V22'])
+print("Kurtosis: " , dataframe[['V22']].kurt())
+print("Skewness: " ,  dataframe[['V22']].skew())
+
+
+# 11. Support your findings in Question 9 using a Scatter Plot.
+print("11 Number : ")
+
+positive_corr.plot.scatter(x= 'Time', y='V1',c='darkblue')
+
+
+positive_corr.plot.scatter(x= 'V4', y='Class', c='k')
+
+
+positive_corr.plot.scatter(x= 'V5', y='Time',c='DarkOrange')
+
+positive_corr.plot.scatter(x= 'V6', y='Amount',c='Gray')
+
+
+dataframe.plot.scatter(x = 'Time', y='V1')
+dataframe.plot.scatter(x = 'V4', y= 'Class')
+dataframe.plot.scatter(x = 'V5', y= 'Time')
+dataframe.plot.scatter(x = 'V6', y= 'Amount')
+dataframe.plot.scatter(x = 'V7', y= 'Amount')
+dataframe.plot.scatter(x = 'V12', y= 'Time')
+dataframe.plot.scatter(x = 'V5', y= 'Time')
+dataframe.plot.scatter(x = 'V20', y= 'Amount')
+dataframe.plot.scatter(x = 'V21', y= 'Amount')
+dataframe.plot.scatter(x = 'V22', y= 'Time')
+
+# 12. Find negative correlations among columns.
+#correlation= dataframe.corr()
+negative_corr= correlation[correlation < 0]
+print(negative_corr)
+
+
+# 13. Support your findings in Question 10 using a BoxPlot.
+negative_corr.boxplot()
+
+
+#14. Support your findings in Question 9 using a Scatter Plot
+print("14 NUMBER : ")
+negative_corr.plot.scatter(x= 'Time', y='Amount',colormap='viridis')
+
+
+negative_corr.plot.scatter(x = 'V1', y='Amount', c='DarkOrange')
+
+negative_corr.plot.scatter(x = 'V8', y='Time', c= 'Gray')
+
+negative_corr.plot.scatter(x = 'V3', y='Time', c= 'DarkGreen')
+
+negative_corr.plot.scatter(x = 'V5', y='Amount', c= 'DarkBlue')
+
+
+
+dataframe.plot.scatter(x = 'V1', y='Amount')
+dataframe.plot.scatter(x = 'V1', y= 'Class')
+dataframe.plot.scatter(x = 'V3', y= 'Time')
+dataframe.plot.scatter(x = 'V3', y='Amount')
+dataframe.plot.scatter(x = 'V3', y= 'Class')
+dataframe.plot.scatter(x = 'V4', y= 'Time')
+dataframe.plot.scatter(x = 'V5', y='Amount')
+dataframe.plot.scatter(x = 'V5', y= 'Class')
+
+dataframe.plot.scatter(x = 'V6', y= 'Time')
+dataframe.plot.scatter(x = 'V7', y= 'Class')
+dataframe.plot.scatter(x = 'V8', y= 'Time')
+dataframe.plot.scatter(x = 'V9', y= 'Time')
+dataframe.plot.scatter(x = 'V9', y= 'Amount')
+dataframe.plot.scatter(x = 'V9', y= 'Class')
+dataframe.plot.scatter(x = 'V10', y= 'Amount')
+dataframe.plot.scatter(x = 'V10', y= 'Class')
+
+dataframe.plot.scatter(x = 'V11', y= 'Time')
+dataframe.plot.scatter(x = 'V12', y= 'Amount')
+dataframe.plot.scatter(x = 'V12', y= 'Class')
+dataframe.plot.scatter(x = 'V13', y= 'Class')
+
+dataframe.plot.scatter(x = 'V14', y= 'Time', c='DarkGreen')
+
+dataframe.plot.scatter(x = 'V1', y= 'Class', colormap='viridis')
