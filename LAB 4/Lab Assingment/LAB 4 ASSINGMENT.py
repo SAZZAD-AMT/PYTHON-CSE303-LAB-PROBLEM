@@ -3,7 +3,7 @@ df = pd.read_csv('C:\\Users\\Hp\\OneDrive\\Desktop\\10TH SEMESTER\\CSE 303\\LAB 
 print("DATASET INFORMATION : ")
 df.info()
 #%%
-# 1. How many rows and columns this dataframe has? Print this information. 
+print("1. How many rows and columns this dataframe has? Print this information. ")
 def lab04_task1_2019_1_60_063():
  print ('Number of rows: ', df.shape[0])
  print ('Number of columns: ', df.shape[1])
@@ -11,15 +11,14 @@ def lab04_task1_2019_1_60_063():
 lab04_task1_2019_1_60_063()
 
 
-#2. Describe (numerical summary) the time and amount column. Print this information. 
+print("2. Describe (numerical summary) the time and amount column. Print this information.") 
 def lab04_task2_2019_1_60_063():
  print(df[['Time', 'Amount']].describe())
 
 lab04_task2_2019_1_60_063()
 
 
-#3. There are 31 columns in the dataset. Compute some statistical measures like mean, median, standard 
-#deviation, variance using Pandas Function for at least two columns. Print this information.
+print("3. There are 31 columns in the dataset. Compute some statistical measures like mean, median, standard deviation, variance using Pandas Function for at least two columns. Print this information.")
 
 #For time and Amount column
 def lab04_task3_2019_1_60_063():
@@ -54,8 +53,7 @@ def lab04_task3_2019_1_60_063():
 lab04_task3_2019_1_60_063()
 
 
-#4. Show the Box Plot of Time and Amount column. Also print the value of Q1, Median, Q3, IQR. Are 
-#there any outliers? Explain your answer and print it. 
+print("4. Show the Box Plot of Time and Amount column. Also print the value of Q1, Median, Q3, IQR. Are there any outliers? Explain your answer and print it.") 
 
 def lab04_task4_2019_1_60_063():
  import assignModule as am
@@ -84,8 +82,7 @@ def lab04_task4_2019_1_60_063():
 lab04_task4_2019_1_60_063()
 
 
-#5. Show the Histogram of Time and Amount column. Print the value of the Skewness and Kurtosis using 
-#appropriate Pandas functions. Comment on the type of the data distribution and print it.
+print("5. Show the Histogram of Time and Amount column. Print the value of the Skewness and Kurtosis using appropriate Pandas functions. Comment on the type of the data distribution and print it.")
 
 def lab04_task5_2019_1_60_063():
     import assignModule as am
@@ -108,8 +105,7 @@ def lab04_task5_2019_1_60_063():
 lab04_task5_2019_1_60_063()
 
 
-#6. Find the percentage of records with class value = 0 (Non-Fraudulent) and class value = 1 (Fraudulent).
-#Print this information. 
+print("6. Find the percentage of records with class value = 0 (Non-Fraudulent) and class value = 1 (Fraudulent).Print this information. ")
 def lab04_task6_2019_1_60_063():
     class0 = len(df[df['Class']==0])*100
     class1 = len(df[df['Class']==1])*100
@@ -121,7 +117,7 @@ lab04_task6_2019_1_60_063()
 
 
 
-#7. Show the result you have got in 6 using a Histogram.
+print("7. Show the result you have got in 6 using a Histogram.")
 def lab04_task7_2019_1_60_063():
     import matplotlib.pyplot as plt
     df_histo = df[['Class']]
@@ -133,8 +129,7 @@ def lab04_task7_2019_1_60_063():
 lab04_task7_2019_1_60_063()
 
 
-#8. Show the result you have got in 6 using a Bar chart. Create the bar chart on the percentage value, not 
-#on the total number of occurrences. 
+print("8. Show the result you have got in 6 using a Bar chart. Create the bar chart on the percentage value, not on the total number of occurrences. ")
 import matplotlib.pyplot as plt
 def lab04_task8_2019_1_60_063():
     Non_Fraudulent = (df.loc[df['Class']==0])*100
@@ -152,9 +147,7 @@ def lab04_task8_2019_1_60_063():
     plt.show()
 lab04_task8_2019_1_60_063()
 
-#9. Show the Histrogram (data distribution) of a few other columns (your choice) showing both positive 
-#and negative skew and also leptokurtic and platykurtic data distribution. So, you should display at least 
-#four Histograms. 
+print("9. Show the Histrogram (data distribution) of a few other columns (your choice) showing both positive and negative skew and also leptokurtic and platykurtic data distribution. So, you should display at least four Histograms.") 
 def lab04_task9_2019_1_60_063():
     import assignModule as am
     df.hist(column = ["V23","V24", "V28", "V12"], bins = 5)
@@ -172,9 +165,7 @@ def lab04_task9_2019_1_60_063():
 lab04_task9_2019_1_60_063()
 
 
-#10. Find the highest positive correlation among all attributes. While finding the correlation, use appropriate 
-#code, not manually. Print this information accordingly.
-
+print("10. Find the highest positive correlation among all attributes. While finding the correlation, use appropriate code, not manually. Print this information accordingly.")
 def lab04_task10_2019_1_60_063():
     correlation= df.corr()
     #print(correlation)
@@ -190,7 +181,7 @@ lab04_task10_2019_1_60_063()
 
 
 
-#11. Support your findings in Question 10 using a Scatter Plot.
+print("11. Support your findings in Question 10 using a Scatter Plot.")
 def lab04_task11_2019_1_60_063():
     correlation= df.corr()
     #print(correlation)
@@ -201,8 +192,7 @@ def lab04_task11_2019_1_60_063():
 lab04_task11_2019_1_60_063()
 
 
-#12. Find the highest negative correlation among all attributes. While finding the correlation, use 
-#appropriate code, not manually. Print this information accordingly.
+print("12. Find the highest negative correlation among all attributes. While finding the correlation, use appropriate code, not manually. Print this information accordingly.")
 def lab04_task12_2019_1_60_063():
     correlation= df.corr()
     #print(correlation)
@@ -215,7 +205,7 @@ def lab04_task12_2019_1_60_063():
 
 lab04_task12_2019_1_60_063()
 
-#13. Support your findings in Question 12 using a Scatter Plot.
+print("13. Support your findings in Question 12 using a Scatter Plot.")
 def lab04_task13_2019_1_60_063():
     correlation= df.corr()
     #print(correlation)
@@ -226,17 +216,14 @@ def lab04_task13_2019_1_60_063():
 lab04_task13_2019_1_60_063()
 
 
-#14. Create a Box Plot of the Amount Column. 
+print("14. Create a Box Plot of the Amount Column. ")
 def lab04_task14_2019_1_60_063():
      df.boxplot(column = ['Amount'])
      
 lab04_task14_2019_1_60_063()
 
 
-#15. Now create two other box plots side by side. The first one will show the Amount column value for 
-#which the class value = 0 (Non-Fraudulent) and the second one will show the Amount column value 
-#for which the class value = 1 (Fraudulent). Do you find any particular pattern by just considering 
-#Amount column. Explain your answer and print it accordingly.
+print("15. Now create two other box plots side by side. The first one will show the Amount column value for which the class value = 0 (Non-Fraudulent) and the second one will show the Amount column value for which the class value = 1 (Fraudulent). Do you find any particular pattern by just considering Amount column. Explain your answer and print it accordingly.")
 
 def lab04_task15_2019_1_60_063():
     import matplotlib.pyplot as plt
