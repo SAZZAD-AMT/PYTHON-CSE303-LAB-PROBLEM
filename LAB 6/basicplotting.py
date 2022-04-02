@@ -57,7 +57,7 @@ plt.yticks(np.linspace(-1,1,5,endpoint=True))
 plt.xlabel("X-axix")
 plt.ylabel("Y-axis")
 plt.legend(loc="upper left")
-plt.title("Sine Graph")
+plt.title("Sin Graph")
 plt.show()
 
 
