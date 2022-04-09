@@ -119,7 +119,7 @@ df_list1.boxplot(column = ['x', 'y'])
 
 ```
 
-# LAb 6
+# LAB 6
 - part of code
 ```
 t = 2*np.pi/3
