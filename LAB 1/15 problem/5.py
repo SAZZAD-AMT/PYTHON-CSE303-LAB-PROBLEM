@@ -7,9 +7,13 @@ def prime_find_2019_1_60_063(number):
                 False
     else: 
         False
+        
 
 N = int(input("Enter positive integer N : "))
 if (prime_find_2019_1_60_063(N)==True):
     print(N, "is not a prime number")
 else:
-    print("%d is a prime number" %N)
+    if(N<0):
+         print("Negetive Value Not ALLOWED")
+    else:
+        print("%d is a prime number" %N)
