@@ -88,5 +88,21 @@ import lat_long as ll
 print(ll)
 
 
+## ERROR VALUE
+y_pred=lr.predict(x_test)
+from sklearn import metrics
+mae=metrics.mean_absolute_error(y_test,y_pred)
+msc=metrics.mean_squared_error(y_test,y_pred)
+r2=metrics.r2_score(y_test,y_pred)
+
+print("The model Performance for testing set")
+
+print("---------------------------------------------------")
+
+print('MAE is %.2f'% mae)
+print('MSE is %.2f'% msc)
+print('R2 score is %.2f'% r2)
+
+
 
 
