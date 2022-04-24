@@ -14,7 +14,7 @@ print(data.X2_house_age.value_counts(),"\n")
 print(data.X3_distance_to_the_nearest_MRT_station.value_counts())
 
 
-data.X1_transaction_date.replace(regex={"transaction":"0","transaction":"1","transaction":"2"},inplace=True)
+data.X1_transaction_date.replace(regex={"a":"0","b":"1","c":"2"},inplace=True)
 data.X2_house_age.replace(regex={"Dealer":"0","Individual":"1"},inplace=True)
 data.X3_distance_to_the_nearest_MRT_station.replace(regex={"Manual":"0","Automatic":"1"},inplace=True)
 
