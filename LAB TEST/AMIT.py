@@ -1,28 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
-
-#%%
-
-# detect a and b
 
 import pandas as pd
 
 df = pd.read_csv('SLR.csv')
+print(df)
 
 df.columns = [['X', 'Y'] ]
-
-#print(df)
-
 X = df['X']
-
 Y = df['Y']
 
 #ploting
-
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as pyp
 import numpy as np
@@ -34,8 +21,6 @@ pyp.show()
 
 x_test_array = np.array(X_test)
 y_test_array = np.array(y_test)
-
-#%%
 
 sumX = 0.0
 sumY = 0.0
@@ -53,7 +38,6 @@ Y = np.array(y_train)
 
 print(type(Y))
 
-#%%
 
 for i in range(0, n):
     sumX = sumX + X[i]
@@ -78,10 +62,8 @@ a = avgY - b * avgX
 print("a : ", a)
 print("B : ", b)
 
-#%%
 
 predictor = a + b * x_test_array
-
 predictor = np.array(predictor)
 
 print(type(predictor))
@@ -104,4 +86,3 @@ pyp.show()
 pyp.plot(y_test_array)
 pyp.show()
 
-#%%
