@@ -4,12 +4,13 @@ import pprint
 
 R=3
 C=3
-A = [[int(input()) for x in range (C)] for y in range(R)]
+#A = [[int(input()) for x in range (C)] for y in range(R)]
 
-# A = [[0, 1, 1],
-#     [2, 3, -1],
-#     [-1, 2, 1]]
+A = [[0, 1, 1],
+    [2, 3, -1],
+    [-1, 2, 1]]
 inv=iv.inverse_3X3_matrix(A)
+print("Inverse Matrix : ")
 pprint.pprint(inv)
 
 # JUST For TESTING THAT THIS IS WRITE OR WRONG BY USING IDENTITY MATRIX
