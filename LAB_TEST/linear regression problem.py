@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+import sys
 
 data=pd.read_csv("RealEstate.csv")
 print("DATASET : \n",data)
@@ -83,7 +84,6 @@ def model(algorithm,x_train_,y_train_,x_test_,y_test_):
     plt.ylabel("values")
     plt.show()
 
-#%%
 
 def LinearRegression1():
     
@@ -217,5 +217,40 @@ print("---------------------------------------------------")
 print('MAE is %.2f'% mae)
 print('MSE is %.2f'% msc)
 print('R2 score is %.2f'% r2)
+
+##hist 
+xx=data[["X4_number_of_convenience_stores"]]
+xx = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.title("X4_number_of_convenience_stores")
+plt.xlabel("Index")
+plt.ylabel("Convenience")
+plt.show()
+#Two  lines to make our compiler able to draw:
+
+## hist 2
+value1 = data['Y_house_price_of_unit_area']
+
+value2 = data['X3_distance_to_the_nearest_MRT_station']
+
+n = len(value1)
+
+x = [value1, value2]
+
+plt.hist(x, 
+         bins = n,
+         density=False,
+         histtype='bar',
+         edgecolor='k',
+         alpha=0.5,
+         width = 10)
+
+plt.title("house price vs distance of the nearest mrt")
+
+plt.xlabel("house price")
+plt.ylabel("distance mrt station")
+
+plt.show()
 
 
